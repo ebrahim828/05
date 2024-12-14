@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منافسة توريد قطع غيار الكترونيات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-alt"></i>  منافسة توريد قطع غيار الكترونيات</h1>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="info"><i class="fas fa-info-circle"></i> معلومات المنافسة</button>
+            <button class="tab-button" data-tab="contact"><i class="fas fa-address-card"></i> معلومات الاتصال</button>
+            <button class="tab-button" data-tab="delivery"><i class="fas fa-map-marker-alt"></i> مكان التسليم</button>
+            <button class="tab-button" data-tab="technical"><i class="fas fa-file-alt"></i> الوثائق الفنية</button>
+            <button class="tab-button" data-tab="financial"><i class="fas fa-file-invoice-dollar"></i> الوثائق المالية</button>
+               <button class="tab-button" data-tab="items"><i class="fas fa-list-ul"></i> جدول الكميات والأسعار</button>
+        </nav>
+
+        <main class="tab-content-container">
+            <div id="info" class="tab-content active">
+                <section class="card">
+                    <h2><i class="fas fa-info-circle"></i> معلومات المنافسة الأساسية</h2>
+                    <div class="info-card">
+                         <div class="info-item"><i class="fas fa-signature"></i> <span class="label">اسم المنافسة:</span> <span id="tenderName">توريد قطع غيار الكترونيات وأجهزة</span></div>
+                          <div class="info-item"><i class="fas fa-hashtag"></i> <span class="label">الرقم المرجعي:</span> <span id="referenceNumber">241239002085</span></div>
+                         <div class="info-item"> <i class="fas fa-file-alt"></i> <span class="label">الغرض من المنافسة:</span> <span id="tenderPurpose">توريد قطع غيار مكيفات هواء وثلاجات احتياج سنوي للعام (1446-1447هـ) ...عرض الأقل...</span></div>
+                          <div class="info-item"> <i class="fas fa-money-bill-wave"></i> <span class="label">قيمة وثائق المنافسة:</span> <span id="documentValue">800.00 ريال</span></div>
+                         <div class="info-item"><i class="fas fa-calendar-alt"></i> <span class="label">مدة العقد:</span> <span id="contractDuration">60 يوم</span></div>
+                         <div class="info-item"><i class="fas fa-building"></i> <span class="label">الجهة الحكومية:</span> <span id="governmentEntity">القوات البرية</span></div>
+
+                    </div>
+                </section>
+                  <section class="card">
+                    <h2><i class="fas fa-calendar-alt"></i> العناوين والمواعيد المتعلقة بالمنافسة</h2>
+                    <div class="info-card">
+                    <div class="info-item"><i class="fas fa-question-circle"></i> <span class="label">آخر موعد لإستلام الإستفسارات:</span> <span id="inquiryDeadline">21/12/2024 20/06/1446</span></div>
+                    <div class="info-item"><i class="fas fa-calendar-check"></i> <span class="label">التاريخ المتوقع للترسية:</span> <span id="awardDate">30/01/2025 30/07/1446</span></div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span class="label">مكان فتح العرض:</span> <span id="offerLocation">ادارة مدينة الملك خالد بحفرالباطن</span></div>
+                    </div>
+                </section>
+
+            <section class="card">
+                    <h2><i class="fas fa-money-bill-wave"></i>  قيمة وثائق المنافسة</h2>
+                    <div class="info-card">
+                         <div class="info-item"> <i class="fas fa-money-bill-wave"></i> <span class="label">قيمة الوثائق:</span> <span id="documentValueDetail">300.00	ثلاثمائة ريال سعودي لا غير.</span></div>
+                         </div>
+                </section>
+            </div>
+
+            <div id="contact" class="tab-content">
+                <section class="card">
+                    <h2><i class="fas fa-address-card"></i> معلومات اتصال ممثل الجهة</h2>
+                    <div class="info-card">
+                        <div class="info-item"><i class="fas fa-user"></i> <span class="label">الإسم:</span> <span id="contactName">منصور فالح الحربي</span></div>
+                        <div class="info-item"><i class="fas fa-briefcase"></i> <span class="label">الوظيفة:</span> <span id="contactPosition">رئيس فرع العقود</span></div>
+                        <div class="info-item"><i class="fas fa-phone"></i> <span class="label">الهاتف:</span> <span id="contactPhone">0137873848</span></div>
+                        <div class="info-item"> <i class="fas fa-fax"></i> <span class="label">الفاكس:</span> <span id="contactFax">0137874576</span></div>
+                        <div class="info-item"> <i class="fas fa-envelope"></i> <span class="label">البريد الإلكتروني:</span> <span id="contactEmail">m-ma-alharbi@mod.gov.sa</span></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="delivery" class="tab-content">
+                <section class="card">
+                    <h2><i class="fas fa-map-marker-alt"></i> مكان تسليم العروض</h2>
+                    <div class="info-card">
+                        <div class="info-item"><i class="fas fa-map"></i> <span class="label">العنوان:</span> <span id="deliveryAddress">مدينة الملك خالد العسكرية بحفرالباطن</span></div>
+                        <div class="info-item"> <i class="fas fa-building"></i> <span class="label">المبنى:</span> <span id="deliveryBuilding">المشتريات</span></div>
+                        <div class="info-item"> <i class="fas fa-level-up-alt"></i> <span class="label">الطابق:</span> <span id="deliveryFloor">الاول</span></div>
+                        <div class="info-item"> <i class="fas fa-door-open"></i> <span class="label">الغرفة / اسم الإدارة:</span> <span id="deliveryRoom">المنافسات</span></div>
+                        <div class="info-item"><i class="fas fa-clock"></i> <span class="label">وقت التسليم:</span> <span id="deliveryTime">05/06/1446 09:00 ص</span></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="technical" class="tab-content">
+                <section class="card">
+                    <h2><i class="fas fa-file-alt"></i> وثائق العرض الفني</h2>
+                    <ol class="doc-list">
+                         <li>يشمل العرض الفني المتطلبات التالية:</li>
+                         <li>1- ارفاق الكراسه الالكترونية بعد التصديق عليها بالختم الرسمي</li>
+                         <li>2- ارفاق جدول الكميات والمواصفات المرفق بالملفات الداعمه بعد التسعير عليها</li>
+
+                    </ol>
+                </section>
+            </div>
+
+            <div id="financial" class="tab-content">
+                <section class="card">
+                    <h2><i class="fas fa-file-invoice-dollar"></i> وثائق العرض المالي</h2>
+                    <ol class="doc-list">
+                        <li>يشمل العرض المالي المتطلبات التالية:</li>
+                        <li>1- سجلات المنشأة سارية الصلاحية</li>
+                        <li>2- ضمان بنكي</li>
+                    </ol>
+                </section>
+            </div>
+             <div id="items" class="tab-content">
+                <section class="card">
+                    <h2><i class="fas fa-list-ul"></i> جدول الكميات والأسعار</h2>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>البند</th>
+                                    <th>وصف البند</th>
+                                    <th>الكمية</th>
+                                </tr>
+                            </thead>
+                             <tbody>
+                                <tr>
+                                     <td>1</td>
+                                    <td>مكبر صوت 230 فولت 60 هيرتز 3 مداخل فرعيه و 2 مدخل للسماعات 240 واط 4-16 أوم مقاس 540 × 535 × 175 ملم .</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                     <td>جهاز خلط ترددات الصوت 230 فولت 60/50 هيرتز 1000 واط ستيريو 225 واط 8أ و م - أدني تحميل 350 واط 4 أ و م , برايد 800 واط 8 أ و م سلكين 24 بايت مع سلك كهرباء ودليل المستخدم .</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                   <td>3</td>
+                                    <td>مكبر صوت فرعي 27 بوصة 500 - 100 واط .</td>
+                                     <td>10</td>
+                                </tr>
+                                <tr>
+                                   <td>4</td>
+                                     <td>ميكرفون معدنى ديناميكي 300 اوم ، 1.8 ميقا فولت (- 55 ديسبيل ) 140 - 15000 هيرتز ، لون رمادى بطقم تركيب للوحه مسننه قطر 12.5 ملم .</td>
+                                    <td>5</td>
+                                </tr>
+                                  <tr>
+                                     <td>5</td>
+                                    <td>حامل مايكرفون ، من الحديد بقاعده شكل " V " ارتفاع 16 بوصه موديل تي واي ام - 21 .</td>
+                                    <td>4</td>
+                                </tr>
+                                 <tr>
+                                      <td>6</td>
+                                   <td>حامل مايكرفون تيوب حديد صلب قابل للتمدد مع قاعده زنك قطر 10 بوصه طول 31 بوصه ارتفاع 38 بوصه موديل تي واي أم ــ 01</td>
+                                    <td>4</td>
+                                </tr>
+                                  <tr>
+                                     <td>7</td>
+                                   <td>جهاز خلط الاصوات 220/120 فولط 1000 واط (500 واط + 500 واط ) وحدة كاملة مدمجة 10 قنوات 14 مدخل 8 أوم 16 برنامج مقاس 155×444×493 ملم على حامل .</td>
+                                    <td>5</td>
+                                </tr>
+                                 <tr>
+                                   <td>8</td>
+                                   <td>رأس أل أن بى كيو باند 8 مخارج .</td>
+                                    <td>5</td>
+                                </tr>
+                                   <tr>
+                                    <td>9</td>
+                                   <td>قسام رقمى 4 مداخل 1 مخرج ، مدى الذبذبة 47 - 2300 ميجا هيرتز ، تيار 500 مل أمبير حد أقصى للريسيفر .</td>
+                                    <td>10</td>
+                                </tr>
+                                 <tr>
+                                     <td>10</td>
+                                   <td>وصلة سمعية ، 3 قطب 16 أمبير مطلى بالنـيكل و مفلف بالبولستر , كيبل قطر 3 - 8 ملم لنظام بـى ايه ,</td>
+                                    <td>40</td>
+                                </tr>
+                                  <tr>
+                                    <td>11</td>
+                                  <td>سماعة مكرفون إتجاهين 150 واط (بى 2031 بى) و 100 واط (بى 2030 بى) مدى التردد 55 هيرتز (بى 2031 بى) و 75 هيرتز (بى 2030 بى) إلى 21 كيلو هيرتز مدى الطول 3/4 8 إلى 3/4 6 بوصه مكبر الصوت عليه غشاء بلاستك خاص ودرع ممغنط .</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                  <td>12</td>
+                                    <td>سماعات 50 واط 200 أوم نوع بوق.</td>
+                                    <td>15</td>
+                                </tr>
+                                  <tr>
+                                    <td>13</td>
+                                  <td>سماعه ، 100 واط ، 4 أوم من البلاستك مع علاقه جدار . .</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                 <td>مايكرفون لاسلكي موجه جيه 1 ، 554 - 590 ميقا هرتز يشمل سماعة مع جهاز ترا نسيتر (1حبه) مايكروفون (1حبه) ورسيفر لا سلكي .</td>
+                                    <td>6</td>
+                                </tr>
+                                  <tr>
+                                     <td>15</td>
+                                    <td>كيبل مزدوج "شكل 8" 13 / 0.2 ملم 60 فولت 2 أمبير بغلاف لون رمادى لتوصيل مكبرات الصوت .</td>
+                                    <td>1000</td>
+                                </tr>
+                                 <tr>
+                                     <td>16</td>
+                                    <td>كيبل بموصلين ، 75 أوم نوع أر جى 6 / يو موصل نحاس مقاس 18 ، 55 % مدرع بالالمونيوم ، 100% غلاف قصدير (فويل) عالى الذبذبه ، مغلف ببلاستك لون أسود (1000 قدم / اللفه) .</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+body {
+    font-family: 'Tajawal', sans-serif; /* تغيير الخط */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0); /* تدرج لوني للخلفية */
+    color: #333;
+    direction: rtl;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden; /* منع التمرير الأفقي غير المرغوب فيه */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+header {
+    padding: 30px;
+    background: linear-gradient(to right, #2c3e50, #34495e); /* تدرج لوني للهيدر */
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #415d7d;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeInDown 0.8s ease-in-out; /* إضافة حركة للعنوان */
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #34495e, #2c3e50);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+.tab-button:focus {
+    outline: none;
+    background-color: rgba(65, 93, 125,0.7);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.tab-button i {
+    margin-left: 10px;
+     transition: transform 0.3s ease;
+}
+.tab-button:hover i {
+     transform: scale(1.1); /* تكبير الأيقونة عند التحويم */
+}
+
+.tab-button.active {
+    background-color: rgba(26, 37, 49, 0.8);
+    border-bottom: 3px solid #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.tab-button:hover {
+    background-color: rgba(65, 93, 125,0.7);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content-container {
+    padding: 30px;
+}
+
+.tab-content {
+    display: none;
+     animation: fadeIn 0.5s ease-in-out; /* إضافة حركة لظهور المحتوى */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 2em;
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    position: relative; /* لجعل تأثير الظل يعمل بشكل صحيح */
+  /* إضافة خط سفلي متحرك */
+}
+.card h2::before {
+ content: '';
+    position: absolute;
+    bottom: -2px; /* موضع الخط أسفل العنوان */
+    left: 0;
+    width: 0; /* في البداية لا يوجد عرض للخط */
+    height: 3px;
+    background-color: #3498db; /* لون الخط */
+     transition: width 0.4s ease-in-out; /* إضافة حركة للخط */
+}
+
+.card:hover h2::before {
+    width: 100%; /* عند التحويم يصبح الخط بكامل عرض العنوان */
+}
+.card h2 i {
+    margin-left: 10px;
+}
+
+.info-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* زيادة عرض العناصر */
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.9);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.info-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.info-item i {
+    margin-left: 15px;
+    color: #3498db;
+    font-size: 1.4em;
+}
+
+.info-item .label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.doc-list {
+    padding-right: 30px;
+    line-height: 1.8;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.info-list {
+    padding-right: 30px;
+    line-height: 1.8;
+    list-style-type: none;
+}
+
+.info-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.info-list li i {
+    margin-left: 15px;
+    color: #3498db;
+    font-size: 1.4em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+    padding: 18px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    position: relative; /* For the underline effect */
+}
+th::after {
+   content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust position as needed */
+    left: 0;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: #3498db; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Transition for animation */
+}
+th:hover::after {
+     width: 100%; /* Animate underline on hover */
+}
+td:hover {
+    background-color: rgba(242, 242, 242, 0.8);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .tab-button {
+        font-size: 1em;
+        padding: 15px;
+    }
+    .info-item {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .card h2 {
+        font-size: 1.6em;
+    }
+    th, td {
+        padding: 12px;
+    }
+}
